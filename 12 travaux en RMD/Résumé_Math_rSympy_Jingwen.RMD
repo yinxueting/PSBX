@@ -1,0 +1,85 @@
+---
+title: "Résumé_Math_rSympy_Jingwen"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser un document de package rSympy dans le langage R expliqué par Jingwen SU, le lien vers son github est https://github.com/Jingwen-su/PSBX.
+
+## Synthèse :
+Dans ce document, Jingwen nous montre quelques exemples du package rSympy pour montrer son utilisation, elle nous explique que c’est un package pour calculer les opérations symboliques. Pour la partie des exemples, elle a fait un exemple de construire l’équation, attribuer des valeurs dans le programme distant, définir la valeur de sortie, et enfin, elle nous a expliqué un peu la différence entre rSympy et Sympy, et nous a rappelé de ne pas les confondre. 
+
+## Extrait commenté :
+```{r eval=FALSE}
+library(rSymPy)
+```
+
+Nous allons commenter la partie des exemples, elle a commencé par définir toutes les variables de l’équation :
+
+```{r eval=FALSE}
+Q <- Var("Q")
+n <- Var("n")
+m <- Var("m")
+g <- Var("g")
+k <- Var("k")
+Sf <- Var("Sf")
+y <- Var("y")
+```
+
+Ici, c’est facile à comprendre car il n’y a pas de difficulté à cette étape tant que nous connaissons un peu de calcul symbolique. 
+
+Ensuite, elle a construit une équation :
+
+```{r eval=FALSE}
+sympy("expr = n*Q*(2*y*sqrt(1+m**2))**(2/3) - k*(m*y**2)**(5/3)*sqrt(Sf)")
+```
+
+Ici, la formule n’est pas dur mais si elle peut expliquer un peu plus sur « sqrt », « * »,  « ** », cela sera mieux pour faire comprendre les grands débutants dans le langage R. 
+
+Enfin, pour les deux dernières calculs, elle a mis :
+
+```{r eval=FALSE}
+sympy("solve(expr.subs([(Q, 1.2), (n, 0.045), (m, 3.4), (Sf, 0.2), (g, 9.806), (k, 1)]), y)")
+out <- sympy("solve(expr.subs([(Q, 1.2), (n, 0.045), (m, 3.4), (Sf, 0.2), (g, 9.806), (k, 1)]), y)")
+out <- as.numeric(unlist(strsplit(gsub("\\[|\\]", "", out), ",")))
+length(out)
+out
+```
+
+Ici, elle est partie un peu loin car sans explication, nous ne comprenons pas la fonction expr.subs, unlist, strsplit et même gsub, nous devons donc obligé de chercher de notre coté les significations de ces fonctions. 
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Au niveau de la mise en page, ce document est relativement agréable à lire, parce que Jingwen a mis tous les codes ou toutes les explications dans les chunks, il y a des titres pour distinguer les parties, mais d’un autre côté, vu que toutes les informations sont dans les chunks, c’est donc un peu compliqué de bien distinguer si ce sont des codes, des explications ou des résultats. 
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Ce n’est pas tout à fait compréhensible car Jingwen n’a pas expliqué en détail toutes les fonctions. 
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Il y a 4 exemples, dans certains exemples, il y a plusieurs fonctions qui sont utilisées.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+Pour certaines fonctions, c’est assez intéressant de les utiliser, mais il y a quand même certaines fonctions qui sont assez rarement rencontrées. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Non, il n’y a pas de bibliographie, c’est donc un peu compliqué de trouver les sources. 
+
+## Conclusion : 
+J’apprécie la partie que Jingwen a comparé la différence entre rSympy et Sympy, parce qu’en tant que débutante sur les langages de programmation, nous avons une grande possibilité de confondre ces deux packages, et elle est très attentive de nous rappeler cette différence. 
+
+
+
+
+
+

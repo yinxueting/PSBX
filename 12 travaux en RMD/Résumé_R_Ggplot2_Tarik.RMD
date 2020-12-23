@@ -1,0 +1,69 @@
+---
+title: "Résumé_R_Ggplot2_Tarik"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser un document de package ggplot2 dans le langage R expliqué par Tarik HAKAM, le lien vers son github est https://github.com/T-Hak/PSBX. 
+
+## Synthèse :
+Dans ce document, Tarik a utilisé le data frame iris pour nous montrer au total 8 graphiques, y compris la graphique de nuage de point, l’histogramme, la boîte à moustache, le diagramme en batons etc.. L'utilisation de chaque graphique est expliquée de façon très détaillée, avec de nouvelles fonctions et significatifs. Cela permet au lecteur d'en apprendre le plus possible sur les capacités de ggplot2, ce qui en fait un outil très pratique pour la réalisation ultérieure de graphiques.
+
+## Extrait commenté :
+```{r}
+library("ggplot2")
+```
+
+Nous allons commenter la partie simple plot sans ggplot2 et simple plot avec ggplot2 : Tarik a comparé les deux graphiques pour nous montrer la puissance de ce package ggplot2. 
+
+```{r}
+plot(x=iris$Sepal.Length, y=iris$Petal.Length, 
+     xlab="Sepal Length", ylab="Petal Length",  main="Fig 1. Sepal-Petal Length Comparaison")
+```
+
+Tarik explique ici en détail la signification de chaque ligne de code et montre les résultats sous forme graphique.
+Il a ensuite utilisé le package ggplot2 pour montrer un code presque identique que celui d’avant avec une explication très précise. 
+
+```{r}
+scatter <- ggplot(data=iris, aes(x = Sepal.Length, y = Petal.Length)) 
+scatter + geom_point(aes(color=Species, shape=Species)) +
+  xlab("Sepal Length") +  ylab("Petal Length") +
+  ggtitle("Fig 2. Sepal-Petal Length Comparaison")
+```
+
+Il montre parfaitement et clairement la différence entre les deux graphiques.
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Il est effectivement très agréable de lire ce document car la mise en page est jolie avec des mots en gras, il n’y a pas de résultat inutile à montrer, que des graphiques très bien présenté avec des titres. 
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Il est totalement compréhensible, parce que Tarik explique chaque code en détail qui facilite beaucoup les lecteurs à comprendre. 
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Il y a au total 8 graphiques et dans chaque graphique, il y a au moins 5 fonctions utilisées, c’est un document donc très complet. 
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+Oui, il est très intéressant d’utiliser ces fonctions parce que ggplot2 peut dessiner plein type de graphique, et Tarik nous en a montré déjà plusieurs. Nous pouvons donc comprendre comment ggplot2 est puissant. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Oui, il y a une bibliographie à la fin du document, ce qui permet les lecteurs à savoir plus d’informations sur ce package. 
+
+## Conclusion : 
+J'apprécie la finition et l'exhaustivité de ce document, Tarik a présenté 8 graphiques de manière très complète et parfaite en un temps limité, chaque graphique montre sa réflexion attentive, ce dont je devrais tirer des enseignements.
+
+
+
+
+

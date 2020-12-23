@@ -1,0 +1,53 @@
+---
+title: "Résumé_Math_Pracma_Vincent"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser un document de package pracma dans le langage R expliqué par Vincent Obertelli, le lien vers son github est https://github.com/vincent93700/PSBX.
+
+## Synthèse :
+Dans ce document, Vincent nous a bien présenté le package pracma dans le langage r qui est un package pour faire des analyses numériques. Il a commencé par copier coller un code qui est déjà fait par les autres sur internet, le but est de nous montrer que si nous maîtrisons bien ce package, nous pouvons aussi atteindre ce niveau. Ensuite il a analysé certaines fonctions qu’ils comprennent bien sur ce package, et enfin il finit par expliquer une fonction qui est relativement simple à comprendre, soit and et or. 
+
+## Extrait commenté :
+Nous allons commenter la partie de la fonction accumarray Vincent commence par nous présenter la description de cette fonction qui est une fonction de permettre de grouper des éléments d’un data set et d’appliquer une fonction pour chaque groupe, ensuite, il a expliqué tous les paramètres en détail qu’il faut utiliser dans cette fonction. Et puis, il a mis un exemple pour bien montrer comment fonctionner la fonction accumarray comme ceci :
+
+```{r}
+library(pracma)
+val = 101:105
+subs = as.matrix(c(1, 2, 4, 2, 4))
+accumarray(subs, val)
+```
+
+Son explication est très complète pour cette partie, et également complète pour les autres partie que je n’ai pas choisi de commenter. 
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Il est très agréable visuellement, même s’il n’y a pas de titre pour chaque partie, mais la typographie est claire et s'accompagne des affiches graphiques. Ce qui rend beau le document. 
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Il est totalement compréhensible car il explique très clairement chaque fonction et montre le processus de sa pensée à travers le texte.
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Il a utilisé dizaine de fonctions qui est assez complet. 
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+Oui, il est très intéressant d’utiliser ces fonctions, car il a décrit quand même les fonctions de base dans ce package.
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Non, il n’y a pas de bibliographie, mais au début du document, il a cité un lien qui est le document officiel pour le package pracma, nous pouvons donc quand même avoir plus d’informations. 
+
+## Conclusion : 
+J’apprécie beaucoup ce document de Vincent, parce qu’il nous a guidé pas à pas d’analyser les fonctions dans le package pracma, par exemple en commençant par copier le code de quelqu'un d'autre et en y introduisant sa propre pensée, ce qui le rend immersif et facile à comprendre pour les lecteurs.
+

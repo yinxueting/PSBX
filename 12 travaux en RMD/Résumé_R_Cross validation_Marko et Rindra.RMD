@@ -1,0 +1,72 @@
+---
+title: "Résumé_R_Cross validation_Marko/Rindra"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser un document de cross validation expliqué par Marko ARSIC / Rindra LUTZ, le lien vers leur github est https://github.com/ARSICMrk/ARSIC_PSBx/tree/main/R_Travail_Sup.
+
+## Synthèse :
+Ce document est basé sur le cross validation, mais Marko et Rindra nous ont expliqué un peu la situation maintenant dans le domaine data, ils nous ont présenté également la méthode descriptive et la méthode prédictive, c’est à partir de cette méthode prédictive que nous avons le cross validation qui est une régression logique, et aussi la partie principale dans ce document, ils nous ont montré quelques exemples pour nous faire comprendre mieux ce cross validation. 
+
+## Extrait commenté :
+Nous allons commenter l’exemple utilisé dans ce document. Marko et Rindra ont d’abord installer et charger le package tydyverse et caret qui est indispensable pour construire un modèle prédictif. Ensuite ils utilisent le data frame swiss pour effectuer les analyses. 
+
+```{r}
+library(tidyverse)
+library(caret)
+data("swiss")
+sample_n(swiss, 3)
+```
+
+Et puis, ils utilisent la méthode cross validation pour définir l’échantillon d’entraînement.
+
+```{r}
+set.seed(123) 
+train.control <- trainControl(method = "cv", number = 10)
+```
+
+Enfin, ils ont entraîné le modèle :
+
+```{r}
+model <- train(Fertility ~., data = swiss, method = "lm",
+               trControl = train.control)
+print(model)
+```
+
+Pendant tout l’exemple, les auteurs ont très bien expliqué le processus et chaque ligne de code, ils ont même comparé juste après les résultats en utilisant le cross validation avec 3 répétitions . 
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Il est très agréable visuellement, parce que les sous-titres de chaque section sont très clairs, qu'il y a des images pour expliquer les descriptions et que les couleurs distinguent les points clés.
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Il est parfaitement compréhensible car les auteurs utilisent de nombreux énoncés explicatifs qui détaillent pourquoi et comment utiliser la validation croisée, en menant pas à pas.
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Ils ont utilisé beaucoup de fonctions principalement dans le package caret pour cette partie de cross validation.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+Oui, la méthode cross validation est très souvent utilisé pour construire un modèle prédictif, donc c’est très intéressant pourquoi et comment utiliser cette méthode. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Oui, il y a une bibliographie pour trouver plus d’information. 
+
+
+## Conclusion : 
+J'apprécie vraiment l'exhaustivité de ce document, les auteurs commencent par un historique de la méthode et vont étape par étape afin que nous, les lecteurs, puissions pleinement comprendre pourquoi et comment utiliser cette méthode de validation croisée. Grâce à ce document, nous pouvons totalement comprendre cette méthode sans avoir aucun problème. 
+
+
+
+

@@ -1,0 +1,35 @@
+---
+title: "Auto évaluation_R_Caret"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Je vais maintenant analyser mon propre document, qui illustre le package caret dans le langage R qui est un package d’un ensemble de fonctions qui tentent de rationaliser le processus de création de modèles prédictifs, je vais évaluer mon document en fonction de mes cinq critères. Vous pouvez retrouver mon document avec mon lien github : https://github.com/yinxueting/PSBX.
+
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Je pense que mon document est visuellement agréable parce que j'ai énuméré les titres de chaque section, inséré des chunks dans les endroits corrects et conservé la structure originale du document.
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Je pense que mon document est relativement facile à comprendre, et comme je suis moi-même une débutante dans divers langages informatiques, j'ai expliqué le package dans les termes les plus simples possibles, et sous chaque titre, j'ai écrit pourquoi je fais cette étape et comment la calculer. Mais après avoir étudié les documents d'autres étudiants, je pense que mon document est relativement complet, car j'ai présenté les étapes complètes de la construction du modèle prédictif. Cependant, la plupart des autres étudiants ont peaufiné une partie de ce package, donc peut-être que mon document n'est pas assez bon au niveau de détails, ce qui est quelque chose que je dois encore améliorer.
+
+<font color=blue>3.	Combien de partie ont été utilisé ? </font>
+
+Je montre un total de cinq parties, qui sont nécessaires pour construire un modèle prédictif.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles parties ? </font>
+
+Je pense que c’est assez intéressant d’utiliser ces parties, car j’ai aussi rajouté une autre façon de vérifier le modèle qui nous donne des idées ouvertes pour construire le modèle prédictif. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Non, même si j’ai effectué plein de recherches et vu des vidéos sur ce package, mais j’ai oublié de mettre une bibliographie pour faciliter les lecteurs à savoir plus d’informations. C’est ce que je dois améliorer. 
+
+En résumé, mon document est relativement complet en ce qui concerne la présentation des étapes à suivre pour construire un modèle prédictif, mais il y a beaucoup de chose à améliorer.
+

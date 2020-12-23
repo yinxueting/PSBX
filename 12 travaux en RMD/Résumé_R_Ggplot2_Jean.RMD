@@ -1,0 +1,70 @@
+---
+title: "Résumé_R_Ggplot2_Jean"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## Entête : 
+Nous allons analyser le package ggplot2 dans le langage R expliqué par Jean SOURIS, le lien vers son github est https://github.com/jeansouris/PSBX. 
+
+## Synthèse :
+Jean a utilisé les données rp2012 dans le package questionr et a utilisé deux types de graphiques : la boîte à moustache et le diagramme de violon dans ce document pour nous expliquer l'utilisation du package ggplot2, accompagné de phrases explicatives relativement complètes, afin de donner aux lecteurs une compréhension claire de la façon de dessiner ces deux graphiques avec ggplot2.
+
+## Extrait commenté :
+```{r}
+library(tidyverse)
+library(questionr)
+data(rp2012)
+rp <- filter(rp2012, departement %in% c("Hauts-de-Seine", "Yvelines", "Essonne", "Seine-Saint-Denis", "Val-de-Marne", "Vald'Oise"))
+```
+
+Nous allons commenter la partie la boite à moustache dans ce document. Une fois les données sélectionnées, Jean a construit une boite à moustache de base en utilisant une seule ligne de code :
+
+```{r}
+ggplot(rp) + geom_boxplot(aes (x = departement, y = maison))
+```
+
+Il explique ensuite que l'on peut modifier la couleur et la largeur avec un exemple de la modification de largeur :
+
+```{r}
+ggplot(rp) + geom_boxplot(aes(x = departement, y = maison), varwidth = TRUE)
+```
+
+Enfin, il a rajouté un code : 
+
+```{r}
+ggplot(rp) + geom_boxplot(aes(x = departement, y = maison)) + geom_jitter(aes(x = departement, y = maison), col = "blue", alpha = 0.3)
+```
+
+Mais ici il explique seulement que le geom "jitter" est une fonction plus précise que le geom "point", pourtant, il n’a pas expliqué ce qui fait geom "point", ni ce que col et alpha signifient, même si les codes sont compréhensibles mais pour les débutants, une explication plus détaillée serait bénéfique à leur compréhension.
+
+## Evaluation :
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Le document est relativement agréable à lire, mais il y a des points à améliorer, comme des graphiques trop grands et prenant beaucoup de place sur une feuille de papier, de plus, certains résultats sont inutiles à montrer, comme les résultats du chargement des packages.
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Oui, il est compréhensible même s’il manque un peu de détail dans certains codes, mais Jean est, dans l'ensemble, très clair dans sa présentation.
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Jean présente principalement deux graphiques, chaque graphique a environ quatre fonctions.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+L'utilisation de ces fonctions est pertinent et intéressant, car Jean a introduit le code de base de ces deux graphiques.
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Non, il n’y a pas de bibliographie, mais Jean a mis le lien de son propre github si jamais nous voulons savoir plus d’informations.
+
+## Conclusion :
+J’apprécie la partie que Jean a utilisé presque les mêmes codes pour présenter les deux différentes graphiques, en tant que lecteur, nous pouvons mieux distinguer les différences entre la boîte à moustache et le diagramme de violon en utilisant les mêmes données. 
+
+
+

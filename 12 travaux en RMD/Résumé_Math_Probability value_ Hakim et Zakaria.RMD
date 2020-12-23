@@ -1,0 +1,52 @@
+---
+title: "Résumé_Math_Probability value_ Hakim/Zakaria"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser un document de probability value dans le langage R expliqué par Hakim DAIF et Zakaria RIADADARAJAT, le lien vers leur github est https://github.com/hakim-daif/p-value/blob/main/p-value.pdf.
+
+## Synthèse :
+Les auteurs ont expliqué la valeur de la probabilité dans ce document de manière très détaillée et complète. Ils ont présenté le contexte historique, mis en avant les questions de recherche et les objectifs de ce mémoire, et nous ont montré à partir de la base théorique, de la criticité et de l'utilisation pratique comment l'utiliser, et quelle est sa valeur dans la pratique de la vie.
+
+## Extrait commenté :
+Nous allons commenter la partie 6.1 « un premier exemple d’inférence statistique : l’estimation du paramètre », les auteurs ont d’abord fait un exemple facile pour avoir un bon début de la compréhension, soit calculer la moyenne taille d’être humain dans 5 tailles différentes d’être humain avec le code :
+
+```{r}
+quelquestailles=c(159,179,183,166,167)
+mean(quelquestailles)
+```
+
+Ici, nous avons que 5 données pour calculer, nous ne pouvons pas dire que la taille moyenne des êtres humains est 170.8cm, donc les auteurs ont introduit un échantillon plus grand pour montrer que le résultat sera plus correct si l’échantillon est plus grand. 
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Il est très agréable de lire ce document car la mise en page est comme un mémoire. 
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Il est compréhensible car les auteurs ont parfaitement bien expliqué chaque détail.
+
+<font color=blue>3.	Combien de partie ont été expliqué ? </font>
+
+Ils ont utilisé 10 parties pour bien montrer la valeur de probabilité.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles parties ? </font>
+
+Il est très intéressant d’utiliser ces parties car cela rend le document très complet.
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Oui, il y a une partie de références. Les auteurs ont cité plusieurs liens.
+
+## Conclusion : 
+J'apprécie l'exhaustivité de ce document, qui est original, nouveau, analyse en profondeur certaines questions, montre une forte capacitée d'analyse et de généralisation des problèmes pratiques, et est bien structuré, logique, avec des niveaux d'exposition clairs, des déclarations fluides, un langage précis et vivant, et surtout très complet. 
+
+

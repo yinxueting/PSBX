@@ -1,0 +1,34 @@
+---
+title: "Auto évaluation_Math_rSympy"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Je vais maintenant analyser mon propre document, qui illustre le package rSympy dans le langage R qui est un package de calcul symbolique qui donne à l’utilisateur un accès de base à la fonctionnalité SymPy, je vais évaluer mon document en fonction de mes cinq critères. Vous pouvez retrouver mon document avec mon lien github : https://github.com/yinxueting/PSBX.
+
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+Je pense que mon document est visuellement agréable parce qu’il est concis au niveau de la longueur, et j’ai conservé la structure originale du document. 
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Mon document est facile à comprendre, parce que j’ai mis que des notions de base des mathématiques, ça fait presque 8 ans que je n’ai pas touché aux maths, donc j’ai mis tous ce que j’ai compris dans ce package, bien qu’elles soient simples. 
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+J’ai mis plusieurs fonctions mais que des fonctions de calcul de base. 
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles parties ? </font>
+
+Vu que ce sont des calculs basiques dans le langage R, donc ce document reste utile pour les débutants. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Non, même si j’ai effectué plein de recherches et vu des vidéos sur ce package, mais j’ai oublié de mettre une bibliographie pour faciliter les lecteurs à savoir plus d’informations. C’est ce que je dois améliorer. 
+
+En résumé, il y a beaucoup de chose à améliorer dans mon document, je vais continuer à étudier et rattraper les notions mathématiques dans le temps suivant. 
