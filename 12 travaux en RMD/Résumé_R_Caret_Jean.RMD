@@ -1,0 +1,72 @@
+---
+title: "Résumé_R_Caret_Jean"
+author: "Xueting YIN"
+date: "2020/12/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Entête : 
+Nous allons analyser le package caret dans le langage R expliqué par Jean SOURIS, le lien vers son github est https://github.com/jeansouris/PSBX.
+
+## Synthèse : 
+Dans ce document, Jean a choisi le data frame iris, il a chargé trois packages : lattice, ggplot2, caret pour nous montrer comment extraire un certain pourcentage de données dans le groupe d’entraînement et le groupe de test avec la fonction createDataPartition(), il a comparé les résultats de deux extractions et de trois extractions afin que les lecteurs puissent voir la différence en un coup d'œil. 
+
+## Extrait commenté : 
+Nous allons commenter la partie « Création d'un tableau séparant les données en gardant l'écart-type global : createDataPartition ». 
+Jean nous guide pas à pas comment extraire une certaine proportion de données à travers un récit textuel. D’abord il faut générer un nombre aléatoire grâce à la fonction set.seed():
+
+```{r}
+library(lattice)
+library(ggplot2)
+library(caret)
+set.seed(2020)
+```
+
+Ensuite, il nous montre les résultats de l'extraction de soixante pour cent des données à trois reprises et explique en détail la signification de chaque ligne de code, par exemple ce que signifie .6 et pourquoi la liste est fausse, et enfin, montrent ce qui se passe si vous n'extrayez que deux fois soixante pour cent des données :
+
+```{r}
+Essaie_1 <- createDataPartition(iris$Species, p = .6, 
+                                  list = FALSE, 
+                                  times = 3)
+head(Essaie_1)
+
+Essaie_2 <- createDataPartition(iris$Species, p = .6, 
+                                list = TRUE, 
+                                times = 2)
+head(Essaie_2)
+
+```
+
+L'explication de Jean de cette partie d'extraction de données est relativement complète.
+
+## Evaluation : 
+<font color=blue>1.	Le document est-il visuellement agréable ? </font>
+
+L'ensemble du document est visuellement confortable, avec une mise en page claire, des sous-titres clairs, concis et plus propices à la compréhension et à la lecture.
+
+<font color=blue>2.	Est-il compréhensible ? ( qualité des explications)</font>
+
+Comme le package caret dans R a de nombreuses fonctions, Jean prend l'une des plus importantes comme point d'entrée et nous montre très bien la fonction createDataPartition() avec un langage explicatif et une présentation des résultats, de sorte que l'ensemble du document est compréhensible.
+
+<font color=blue>3.	Combien de fonctions ont été utilisé ? </font>
+
+Jean a utilisé principalement deux fonction : set.seed() pour générer un nombre aléatoire, createDataPartition() pour extraire un pourcentage défini des données.
+
+<font color=blue>4.	Est-il intéressant d’utiliser telles fonctions ? </font>
+
+Oui, caret est un package pour construire un modèle prédictif, mais avant de construire ce modèle, nous avons besoin deux groupes de données, donc ici Jean nous a montré la fonction importante dans le package caret. 
+
+<font color=blue>5.	Y-a-t-il une bibliographie? </font>
+
+Jean n’a pas mis un titre bibliographie, mais il a cité une source pour la remercier et pour que les lecteurs puissent savoir plus d’informations sur ce package. 
+
+## Conclusion : 
+J'apprécie la partie expliquée par Jean dans un langage concis et clair, qui permet aux lecteurs de mieux comprendre le contexte de fonctionnement de ce package. De plus, j'apprécie également la partie de comparaison, qui nous offre de nouvelles options. Bien sûr, le défaut de ce document est qu’il est trop succinct et nous pouvons connaître que deux fonctions. 
+
+
+
+
